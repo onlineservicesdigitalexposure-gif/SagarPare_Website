@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 210 100% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 100% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 100% 12%;
+
+    --primary: 205 87% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 199 89% 48%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 200 25% 95%;
+    --muted-foreground: 210 40% 40%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 210 100% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 90%;
+    --input: 200 20% 90%;
+    --ring: 205 87% 21%;
+
+    --radius: 0.75rem;
+
+    --ocean-deep: 210 100% 15%;
+    --ocean-medium: 205 87% 21%;
+    --ocean-light: 199 89% 48%;
+    --ocean-pale: 195 65% 85%;
+    --sand: 43 74% 90%;
+    --coral: 14 91% 65%;
+    
+    --wave-gradient: linear-gradient(135deg, hsl(199 89% 48%) 0%, hsl(205 87% 21%) 100%);
+    --hero-overlay: linear-gradient(135deg, hsl(210 100% 15% / 0.85) 0%, hsl(205 87% 21% / 0.75) 100%);
+    --section-wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,138.7C960,139,1056,117,1152,101.3C1248,85,1344,75,1392,69.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  }
+
+  .dark {
+    --background: 210 100% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 210 80% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 210 80% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 205 87% 21%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 60% 20%;
+    --muted-foreground: 200 20% 70%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 210 100% 12%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 50% 25%;
+    --input: 210 50% 25%;
+    --ring: 199 89% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'kern' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .wave-divider {
+    @apply relative;
+  }
+  
+  .wave-divider::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-full h-24;
+    background: var(--section-wave);
+    background-size: cover;
+    transform: translateY(100%);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--wave-gradient);
+  }
+
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+}
