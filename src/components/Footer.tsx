@@ -113,8 +113,8 @@ const Footer = () => {
             </div>
             <div className="mt-6 p-4 rounded-lg bg-white/5 border border-white/10">
               <p className="text-white/90 text-sm font-medium">
-                Check-in: 2:00 PM<br />
-                Check-out: 11:00 AM
+                Check-in: 8:00 AM<br />
+                Check-out: 7:00 AM
               </p>
             </div>
           </div>

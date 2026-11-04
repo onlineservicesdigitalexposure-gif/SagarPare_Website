@@ -221,7 +221,7 @@ const Rooms = () => {
                 </div>
                 <div>
                   <p className="font-medium text-sm text-muted-foreground">Standard Check-in</p>
-                  <p className="text-2xl font-bold text-foreground">2:00 PM</p>
+                  <p className="text-2xl font-bold text-foreground">8:00 AM</p>
                 </div>
               </div>
 
@@ -233,7 +233,7 @@ const Rooms = () => {
                 </div>
                 <div>
                   <p className="font-medium text-sm text-muted-foreground">Standard Check-out</p>
-                  <p className="text-2xl font-bold text-foreground">11:00 AM</p>
+                  <p className="text-2xl font-bold text-foreground">7:00 AM</p>
                 </div>
               </div>
             </div>
